@@ -34,16 +34,22 @@ $(document).ready ( () => {
 
     //Start Game
     $('.startGame').on("click", () => {
-        var startGame = setTimeout(gameOver, 10000);
-
+        //On click "Start Game", execute and display countdown
+        var timer = setInterval( ()=> {  
+            time--
+            console.log(time);
+            $('#display').text(time);
+        }, 1000);
         
-
-        var stopTimer = function stopTimer () {
-            clearInterval(timer);
-        }
+        //Display "Game Over" if timer ends and stop countdown from displaying less than 0
         var gameOver = function gameOver () {
             alert("You did not answer in time! Game Over!");
+            clearInterval(timer);
         };
+
+        //On click "Start Game", execute timer
+        var startGame = setTimeout(gameOver, 10000);
+
 
         $('#confirmAnswer').on("click", () => {
             event.preventDefault();
@@ -52,6 +58,7 @@ $(document).ready ( () => {
                 if (value === questions.correctAnswer) {
                     alert("Yes, you are correct! My name is " + value);
                     clearTimeout(startGame);
+                    clearInterval(timer);
                     point++;
                     $('#points').text(point);
                 } else {

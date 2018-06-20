@@ -14,7 +14,7 @@
     
 </head>
 <body>
-    <!-- Modal -->
+    <!-- Start Modal -->
     <div class="modal fade" id="startGame" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -36,7 +36,8 @@
     </div>
 
     <div class="container">
-            <button type="button" class="startGame btn btn-primary" data-dismiss="modal">Start Game!</button>
+        <h2>Time Remaining</h2>
+        <h3 id="display">00:00</h3>
         <h3 id="question"></h3>
         <form>
             <div id="answerSet"></div>
@@ -51,11 +52,11 @@
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- My JS-->
-    <script src="assets/js/trivial.js"></script>
+    <script src="assets/js/trivial.02.js"></script>
     <!-- Modal to appear on window load-->
     <script type="text/javascript">
         $(window).on('load',function() {
-            $('#startGame').modal('hide');
+            $('#startGame').modal('show');
         });
     </script>
 </body>
