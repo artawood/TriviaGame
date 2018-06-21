@@ -2,7 +2,7 @@
 
 $(document).ready ( () => {
 
-    var questions = {
+    var questionOne = {
         question : "What is my name?",
         answerSet : ["Bob", "Art", "Adam", "Henry"],
         correctAnswer : "Art",
@@ -11,20 +11,24 @@ $(document).ready ( () => {
     // display points
     var point = 0;
     $('#points').text(point);
-    
-    var answerDiv = $('#answerSet');
 
-    var question = $('#question').text(questions.question);
-    
-    question.append(question);
+    var question = $("<h3>").attr("class", "question").text(questionOne.question);
 
-    questions.answerSet.forEach((answers) => {
-        var answer = answers;
+    var questionForm = $('#questions');
+    
+    questionForm.append(question);
+
+    var answerDiv = $('<div>').attr("class", "anwserSet");
+    questionForm.append(answerDiv);
+
+    questionOne.answerSet.forEach((answers) => {
+        var answerOne = answers;
+        console.log(answerOne);
         var radioDiv = $('<div>').attr("class", "radio");
         var label = $('<label>');
         answerDiv.append(radioDiv);
         radioDiv.append(label);
-        label.html("<input class='selectAnswer' type='radio' name='optradio' value='" + answer + "'>" + answer);
+        label.html("<input class='selectAnswer' type='radio' name='optradio' value='" + answerOne + "'>" + answerOne);
 
     });
 
@@ -55,7 +59,7 @@ $(document).ready ( () => {
             event.preventDefault();
             var value = $("input[type='radio']:checked").val();
             if ($("input[type='radio']").is(':checked')) {
-                if (value === questions.correctAnswer) {
+                if (value === questionOne.correctAnswer) {
                     alert("Yes, you are correct! My name is " + value);
                     clearTimeout(startGame);
                     clearInterval(timer);
