@@ -1,4 +1,4 @@
-# TrivialGame Homework
+# Trivia Game Homework
 
 Updated 06/21/18 version 03.1
 - added trivia questions for Giant Panda
