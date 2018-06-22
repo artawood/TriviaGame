@@ -1,0 +1,11 @@
+/* my style */
+.modal-backdrop
+{
+    opacity: 0.98 !important;
+}
+
+.jumbotron {
+    background-image: url('../images/panda.png');
+    background-size: 100%;
+    background-position-y: center;
+}

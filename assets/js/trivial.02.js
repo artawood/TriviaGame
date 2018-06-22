@@ -60,7 +60,7 @@ $(document).ready ( () => {
             var value = $("input[type='radio']:checked").val();
             if ($("input[type='radio']").is(':checked')) {
                 if (value === questionOne.correctAnswer) {
-                    alert("Yes, you are correct! My name is " + value);
+                    $('#success').modal('show');
                     clearTimeout(startGame);
                     clearInterval(timer);
                     point++;
@@ -72,6 +72,10 @@ $(document).ready ( () => {
                 alert(" Please Select any Option ");
             }
         });
+    });
+
+    $(".playAgain").on("click", () => {
+        location.reload();
     });
 
 });

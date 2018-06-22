@@ -19,7 +19,7 @@
             <h1 class="jumbotron-heading">Art's Trivial Game</h1>
             <p class="lead text-muted">Answer the questions before the time runs out!</p>
             <h2>Time Remaining</h2>
-            <h3> <span id="display">00:00</span> second</h3>
+            <h3 id="display">00:00</h3>
         </div>
     </section>
     <!-- Start Modal -->
@@ -47,45 +47,25 @@
         <button id="confirmAnswer" class="btn btn-primary">Submit</button>
     </div>
 
-    <!-- Submitted Modal -->
+    <!-- Success Modal -->
     <div class="modal fade" id="success" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Results</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h4>You answered <span id="points"></span> out of 3 questions correctly</h4>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="playAgain btn btn-primary" data-dismiss="modal">Play Again!</button>
-            </div>
-            </div>
-        </div>
-    </div><!-- Submitted Modal-->
-
-    <!-- TimeUp Modal -->
-    <div class="modal fade" id="timeUp" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title">Time's up!</h3>
+                    <h5 class="modal-title">Results</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>You ran out of time!</p>
+                    <h4>You answered <span id="points"></span> questions correctly</h4>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="playAgain btn btn-primary" data-dismiss="modal">Play Again!</button>
                 </div>
                 </div>
             </div>
-        </div><!-- TimeUp Modal-->
+        </div><!-- Start Modal-->
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!-- Popper JS-->
@@ -93,7 +73,7 @@
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- My JS-->
-    <script src="assets/js/trivial.03.js"></script>
+    <script src="assets/js/trivial.02.js"></script>
     <!-- Modal to appear on window load-->
     <script type="text/javascript">
         $(window).on('load',function() {
