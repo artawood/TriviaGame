@@ -9,3 +9,15 @@
     background-size: 100%;
     background-position-y: center;
 }
+
+.clock {
+    position: absolute;
+    z-index: 1050;
+    bottom: 0px;
+    right: 0px;
+}
+
+.white {
+    color: #ffffff;
+    text-shadow: 2px 1px #3e4144;
+}
